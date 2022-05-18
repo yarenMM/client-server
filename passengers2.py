@@ -18,8 +18,9 @@ class Passengers:
         self.max_ttl = ttl
 
         self.ClientSocket = socket.socket()
-        self.host = '127.0.0.1'
-        self.port = 1233
+        #self.host = '127.0.0.1'
+        self.host = '192.168.186.20'
+        self.port = 1234
 
         try:
             self.ClientSocket.connect((self.host, self.port))
