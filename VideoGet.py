@@ -8,8 +8,8 @@ class VideoGet:
     """
 
     def __init__(self):
-        #self.stream = cv2.VideoCapture(1)
-        self.stream = cv2.VideoCapture('/home/mendel/APCym/video_1.mp4')
+        self.stream = cv2.VideoCapture(1)
+        #self.stream = cv2.VideoCapture('/home/mendel/APCym/video_1.mp4')
 
         #self.stream.set(cv2.CAP_PROP_POS_FRAMES, 300)
         #self.stream.set(cv2.CAP_PROP_BUFFERSIZE, 2)
