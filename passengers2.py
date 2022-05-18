@@ -21,6 +21,8 @@ class Passengers:
         #self.host = '127.0.0.1'
         self.host = '192.168.186.20'
         self.port = 1234
+        hostname = socket.gethostname()
+        self.ip_address = socket.gethostbyname(hostname)
 
         try:
             self.ClientSocket.connect((self.host, self.port))
@@ -122,11 +124,11 @@ class Passengers:
             #print(self.passengers[pid].direction, self.passengers[p.id].cy, p.id, pid, self.area[0])
             if self.passengers[pid].direction < 0 and self.passengers[pid].cy > self.area[1] and self.passengers[pid].init_coord_y < self.area[0]:
                 self.exited += 1
-                info = "0"
+                info = "0, "+ self.ip_address
                 ClientSocket.send(str.encode(info))
             elif self.passengers[pid].direction > 0 and self.passengers[pid].cy < self.area[0] and self.passengers[pid].init_coord_y > self.area[1]:
                 self.entered += 1
-                info = "1"
+                info = "1, "+ self.ip_address
                 ClientSocket.send(str.encode(info))
 
             self.count = self.entered - self.exited
