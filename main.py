@@ -119,7 +119,7 @@ def main():
         key = cv2.waitKey(1) & 0xff
 
         #sleep som funkar
-        time.sleep(1/30)
+        #time.sleep(1/30)
         rotate = False
 
         if rotate:
