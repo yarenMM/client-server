@@ -19,7 +19,7 @@ class Passengers:
 
         self.ClientSocket = socket.socket()
         #self.host = '127.0.0.1'
-        self.host = '192.168.186.20'
+        self.host = '192.168.133.20'
         self.port = 1234
         #hostname = socket.gethostname()
         #self.ip_address = socket.gethostbyname(hostname)
